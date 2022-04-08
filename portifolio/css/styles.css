@@ -1022,15 +1022,15 @@ section .card .image img{
 
   .certificate__card{
     justify-content: center;
-    height: 285px;
-    width: 305px;
+    height: 235px;
+    width: 255px;
     padding-bottom: 12px;
     column-gap: 1rem;
   }
 
   .certificate__img{
-    width: 230px;
-    height: 200px;
+    width: 180px;
+    height: 150px;
   }
 }
 
