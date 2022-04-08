@@ -55,6 +55,8 @@
   --home-social: #BB160A;
   --services-button: #BB160A;
   --services__modal-title: #BB160A;
+  --caixa-color-2: #0e0e0e;
+  --caixa-color-3: #0e0e0e;
 
 
   /*========== Font and typography ==========*/
@@ -118,7 +120,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: var(--title-color);
+  color: color: var(--title-color);
   font-weight: var(--font-semibold);
 }
 
@@ -167,7 +169,7 @@ body.light-theme{
   --skills-name-color: #000;
   --skills-box-color: #fff;
   --check-icon: #009e0f;
-  --title-red-color: #005abb;
+  --title-red-color: #000;
   --contact-button: #04b916;
   --cor-cabecalho: #000;
   --icon-background: #fff;
@@ -176,6 +178,8 @@ body.light-theme{
   --services-button: #009e0f;
   --services-title: rgb(22, 22, 22);
   --services__modal-title: #000;
+  --caixa-color-2: #fff;
+  --caixa-color-3: #000;
 }
 
 /*========== 
@@ -336,20 +340,17 @@ body.light-theme{
 }
 
 section .card .image{
-  height: 220px;
-  width: 220px;
+  height: 240px;
+  width: 230px;
   border-radius: 50%;
   padding: 3px;
-  background-color: white;
 }
 
 section .card .image img{
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #000000;
-  box-shadow: 0 0 40px #FFFFFF;
+  border-radius: 15%;
 }
 
 .foto{
@@ -390,7 +391,7 @@ section .card .image img{
 }
 
 .home__social-link:hover{
-  background-color: var(--red-color);
+  background-color: var(--button-main-color);
   color: var(--white-color);
 }
 
@@ -465,14 +466,19 @@ section .card .image img{
 }
 
 .about__box{
-  background-color:  var(--caixa-color);
+  background-color: var(--caixa-color-3);
   border-radius: .75rem;
   padding: .75rem .5rem;
 }
 
+.about__box:hover{
+  transform: translateY(.45rem);
+}
+
+
 .about__icon{
   font-size: 1.5rem;
-  color: #561562;
+  color: var(--check-icon);
   margin-bottom: .5rem;
 }
 
@@ -680,7 +686,8 @@ section .card .image img{
 }
 
 .work__card{
-  background-color: var(--caixa-color);
+  background-color: var(--caixa-color-2);
+  box-shadow: 0 0 5px var(--box-shawdow);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -688,18 +695,19 @@ section .card .image img{
 .work__img{
   border-radius: 1rem;
   margin-bottom: .75rem;
+  box-shadow: 0 0 8px var(--box-shawdow);
 }
 
 .work__title{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   margin-bottom: .25rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .work__button{
   width: max-content;
-  color: var(--red-color);
+  color: var(--button-main-color);
   font-size: var(--small-font-size);
   display: flex;
   align-items: center;
@@ -717,12 +725,13 @@ section .card .image img{
 
 /* Active item work*/
 .active-work{
-  background-color: var(--red-color);
+  background-color: var(--button-main-color);
   color: var(--black-color);
 }
 /*--=============== CERTIFICADOS ===============*/
 .certificate__container{
   padding-top: 1rem;
+  align-items: center;
 }
 
 .certificate__img{
@@ -730,10 +739,18 @@ section .card .image img{
   margin-bottom: .75rem;
   width: 580px;
   height: 420px;
+  box-shadow: 0 0 7px var(--box-shawdow);
+  transition: transform .5s;
+}
+
+.certificate__img:hover{
+  transform: translateX(10px) scale(1.1);
 }
 
 .certificate__card{
-  background-color: var(--caixa-color);
+  align-items: center;
+  background-color: var(--caixa-color-2);
+  box-shadow: 0 0 10px var(--box-shawdow);
   padding: 1rem;
   border-radius: 1rem;
   width: 550px;
@@ -744,12 +761,12 @@ section .card .image img{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   margin-bottom: .25rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .certificate__button{
   width: max-content;
-  color: var(--red-color);
+  color: var(--button-main-color);
   font-size: var(--small-font-size);
   display: flex;
   align-items: center;
@@ -759,7 +776,8 @@ section .card .image img{
 
 /*=============== TESTIMONIAL ===============*/
 .testimonial__card{
-  background-color: var(--caixa-color);
+  background-color: var(--caixa-color-2);
+  box-shadow: 0 0 5px var(--box-shawdow);
   padding: 1.25rem 1.5rem;
   border-radius: 1.5rem;
   margin-bottom: 3rem;
@@ -775,12 +793,12 @@ section .card .image img{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   margin-bottom: .25rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .testimonial__description{
   font-size: var(--small-font-size);
-  color: #fff;
+  color: var(--white-color);
 }
 
 /* Swiper class */
@@ -804,8 +822,9 @@ section .card .image img{
 }
 
 .contact__card{
+  padding-top: 30rem;
   background-color: var(--skills-box-color);
-  box-shadow: 0 0 10px var(--box-shawdow);
+  box-shadow: 0 0 15px var(--box-shawdow);
   padding: 1rem;
   border-radius: .75rem;
   text-align: center;
@@ -824,13 +843,13 @@ section .card .image img{
 
 .contact__card-title{
   font-weight: var(--font-medium);
-  color: #fff;
+  color: var(--white-color);
 }
 
 .contact__card-data{
   display: block;
   margin-bottom: .75rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .contact__button{
@@ -902,7 +921,7 @@ section .card .image img{
 
 .footer__title,
 .footer__link{
-  color: var(--black-color)
+  color: #fff;
 }
 
 .footer__title{
@@ -925,7 +944,7 @@ section .card .image img{
 
 .footer__social-link{
   background-color: var(--black-color);
-  color: var(--red-color);
+  color: var(--contact-button);
   padding: .25rem;
   border-radius: .25rem;
   font-size: 1rem;
@@ -1001,14 +1020,17 @@ section .card .image img{
     column-gap: .25rem;
   }
 
-  .certificate__img{
-    width: 280px;
-    height: 220px;
+  .certificate__card{
+    justify-content: center;
+    height: 285px;
+    width: 305px;
+    padding-bottom: 12px;
+    column-gap: 1rem;
   }
 
-  .certificate__card{
-    width: 305px;
-    height: 320px;
+  .certificate__img{
+    width: 230px;
+    height: 200px;
   }
 }
 
@@ -1058,10 +1080,6 @@ section .card .image img{
 
   .work__img{
     width: 295px;
-  }
-
-  .certificate__container{
-    justify-content: center;
   }
 
   .certificate__img{
