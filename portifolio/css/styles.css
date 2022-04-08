@@ -977,7 +977,7 @@ section .card .image img{
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 412px){
   .nav__menu{
     padding: 1rem 1.5rem;
   }
