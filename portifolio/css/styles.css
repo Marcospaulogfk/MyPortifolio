@@ -737,8 +737,8 @@ section .card .image img{
 .certificate__img{
   border-radius: 1rem;
   margin-bottom: .75rem;
-  width: 580px;
-  height: 420px;
+  width: 280px;
+  height: 220px;
   box-shadow: 0 0 7px var(--box-shawdow);
   transition: transform .5s;
 }
@@ -753,8 +753,8 @@ section .card .image img{
   box-shadow: 0 0 10px var(--box-shawdow);
   padding: 1rem;
   border-radius: 1rem;
-  width: 550px;
-  height: 520px;
+  width: 350px;
+  height: 320px;
 }
 
 .certificate__title{
@@ -977,7 +977,7 @@ section .card .image img{
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 387px){
+@media screen and (max-width: 320px){
   .nav__menu{
     padding: 1rem 1.5rem;
   }
@@ -1019,34 +1019,10 @@ section .card .image img{
   .work__filters{
     column-gap: .25rem;
   }
-
-  .certificate__card{
-    justify-content: center;
-    height: 235px;
-    width: 255px;
-    padding-bottom: 12px;
-    column-gap: 1rem;
-  }
-
-  .certificate__img{
-    width: 180px;
-    height: 150px;
-  }
 }
 
 /* For medium devices */
-@media screen and (min-width: 572px){
-  .certificate__img{
-   width: 210px;
-   height: 180px;
-  }
-
-  .certificate__card{
-    column-gap: 1rem;
-    padding-bottom: 12px;
-    height: 265px;
-    width: 280px;
-  }
+@media screen and (min-width: 576px){
   .nav__menu{
     width: 328px;
     left: 0;
