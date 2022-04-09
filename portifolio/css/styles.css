@@ -977,7 +977,7 @@ section .card .image img{
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 550px){
+@media screen and (max-width: 412px){
   .nav__menu{
     padding: 1rem 1.5rem;
   }
@@ -1035,7 +1035,18 @@ section .card .image img{
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px){
+@media screen and (min-width: 412px){
+  .certificate__img{
+   width: 180px;
+   height: 150px;
+  }
+
+  .certificate__card{
+    column-gap: 1rem;
+    padding-bottom: 12px;
+    height: 235px;
+    width: 255px;
+  }
   .nav__menu{
     width: 328px;
     left: 0;
@@ -1080,16 +1091,6 @@ section .card .image img{
 
   .work__img{
     width: 295px;
-  }
-
-  .certificate__img{
-    width: 290px;
-    height: 260px;
-  }
-
-  .certificate__card{
-    width: 355px;
-    height: 370px;
   }
 
   .contact__info{
