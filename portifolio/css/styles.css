@@ -977,7 +977,7 @@ section .card .image img{
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 412px){
+@media screen and (max-width: 387px){
   .nav__menu{
     padding: 1rem 1.5rem;
   }
@@ -1035,7 +1035,7 @@ section .card .image img{
 }
 
 /* For medium devices */
-@media screen and (min-width: 413px){
+@media screen and (min-width: 572px){
   .certificate__img{
    width: 210px;
    height: 180px;
