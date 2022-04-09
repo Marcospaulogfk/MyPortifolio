@@ -72,9 +72,9 @@ themeButton.addEventListener('click', () => {
 
 
 
-const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalClose = document.querySelectorAll('.services__modal-close')
+const modalViews = document.querySelectorAll('.services__modal, .work__modal'),
+      modalBtns = document.querySelectorAll('.services__button, .work__button'),
+      modalClose = document.querySelectorAll('.services__modal-close, .work__modal-close')
 
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal')
@@ -106,7 +106,5 @@ function activeWork(){
 }
 
 linkWork.forEach(L=> L.addEventListener('click, activework'))
-
-
 
 

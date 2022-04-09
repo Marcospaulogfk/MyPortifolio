@@ -57,6 +57,7 @@
   --services__modal-title: #BB160A;
   --caixa-color-2: #0e0e0e;
   --caixa-color-3: #0e0e0e;
+  --services-title: #fff;
 
 
   /*========== Font and typography ==========*/
@@ -151,10 +152,6 @@ img {
   color: var(--moon-color);
 }
 
-
-.change-theme:hover{
-  color: var(--first-color);
-}
 
 /*========== Variables Dark theme ==========*/
 body.light-theme{
@@ -259,9 +256,6 @@ body.light-theme{
   transition: .4s;
 }
 
-.nav__logo:hover{
-  color: var(--first-color-alt);
-}
 
 .nav__menu{
   position: fixed;
@@ -723,11 +717,82 @@ section .card .image img{
   transition: .4s;
 }
 
+.work__modal{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 15, 15, 0.699);
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  z-index: var(--z-modal);
+}
+
+.work__modal-content{
+  position: relative;
+  background-color: var(--black-color);
+  padding: 4.5rem 1.5rem 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.work__modal-title,
+.work__modal-description{
+  text-align: center;
+}
+
+.work__modal-title{
+  font-size: var(--h3-font-size);
+  color: var(--services__modal-title);
+  margin-bottom: 1rem;
+}
+
+.work__modal-description{
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.work__modal-list{
+  display: grid;
+  row-gap: .75rem;
+}
+
+.work__modal-item{
+  display: flex;
+  align-items: flex-start;
+  column-gap: .5rem;
+}
+
+.work__modal-icon{
+  font-size: 1.5rem;
+  color: var(--button-main-color);
+}
+
+.work__modal-info{
+  font-size: var(--small-font-size);
+}
+
+.work__modal-close{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--button-main-color);
+  cursor: pointer;
+}
+
+.active-modal{
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Active item work*/
 .active-work{
   background-color: var(--button-main-color);
   color: var(--black-color);
 }
+
 /*--=============== CERTIFICADOS ===============*/
 .certificate__container{
   padding-top: 1rem;
@@ -802,7 +867,13 @@ section .card .image img{
 }
 
 /* Swiper class */
+.swiper-pagination-bullet{
+  background-color: var(--text-color-light);
+}
 
+.swiper-pagination-bullet-active{
+  background-color: var(--button-main-color);
+}
 
 /*=============== CONTACT ===============*/
 .contact__container{
