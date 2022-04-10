@@ -787,6 +787,20 @@ section .card .image img{
   visibility: visible;
 }
 
+.paginas__modal-item{
+  display: flex;
+  align-items: flex-start;
+  column-gap: .5rem;
+}
+
+.link__icon:hover{
+  transform: translateX(0.25rem);
+}
+
+.link__icon{
+  transform: 0.2s;
+}
+
 /* Active item work*/
 .active-work{
   background-color: var(--button-main-color);
